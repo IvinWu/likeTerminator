@@ -1,0 +1,15 @@
+<view class="moment">
+    <view class="avatar">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="moment-main">
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <text class="moment-content">这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字</text>
+        <image class="moment-img" src="../../img/test.png" background-size="cover"></image>
+        <view class="moment-extend">
+            <text class="moment-time">2016年10月22日 17:19</text>
+            <text class="moment-delete">删除</text>
+            <image class="moment-control" src="../../img/test.png" background-size="cover"></image>
+        </view>
+    </view>
+</view>

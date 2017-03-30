@@ -1,0 +1,29 @@
+.moment {
+    padding: 24.5rpx;
+	display: flex;
+}
+.avatar {
+    width: 86rpx;
+    height: 86rpx;
+    padding: 5rpx;
+    border: 1px #666;
+    text-align: center;
+    margin-right: 1.5rpx;
+}
+.userinfo-avatar {
+    width: 86rpx;
+    height: 86rpx;
+}
+.moment-main {
+    width:565rpx;
+    flex:1;
+}
+.userinfo-nickname {
+    display: block;
+    color: blue;
+}
+.moment-control {
+    width: 60rpx;
+    height: 60rpx;
+    display: inline-block;
+}
