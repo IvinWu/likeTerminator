@@ -1,11 +1,11 @@
 <form bindsubmit="submit">
     <view>
         <textarea auto-focus placeholder="这一刻的想法..." name="textarea" />
-        <image class="create-img" src="../../img/test.png" background-size="cover"></image>
+        <image class="create-img" src="{{imgSrc}}" background-size="cover"></image>
     </view>
 
     <view>
-        <input placeholder="多少人赞" name="likeCount" />
+        <input placeholder="多少人赞" type="number" name="likeCount" maxlength="3" />
     </view>
 
     <button type="primary" form-type="submit">提交</button>

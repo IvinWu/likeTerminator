@@ -1,18 +1,14 @@
 .moment {
-    padding: 24.5rpx;
+    padding: 15px;
 	display: flex;
 }
 .avatar {
-    width: 86rpx;
-    height: 86rpx;
-    padding: 5rpx;
-    border: 1px #666;
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border: 1px #ddd solid;
     text-align: center;
-    margin-right: 1.5rpx;
-}
-.userinfo-avatar {
-    width: 86rpx;
-    height: 86rpx;
+    margin-right: 5px;
 }
 .moment-main {
     width:565rpx;
@@ -20,10 +16,56 @@
 }
 .userinfo-nickname {
     display: block;
-    color: blue;
+    color: #576b95;
+    font-size: 16px;
+}
+.moment-content {
+    font-size: 14px;
+    margin: 5px 0;
+    display: block;
+    word-wrap:break-word;
+}
+.moment-img {
+    width: 80%;
+}
+.moment-extend {
+    font-size: 13px;
+    position:relative;
+}
+.moment-time {
+    color:#999;
+}
+.moment-delete {
+    color: #576b95;
+    padding-left: 5px;
 }
 .moment-control {
-    width: 60rpx;
-    height: 60rpx;
-    display: inline-block;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    right: 0px;
+    bottom:5px;
+}
+.comments:before {
+    content:"";
+    background-image:url("../../img/likeBg.png");
+    background-color: #f3f3f5;
+    background-repeat:no-repeat;
+    width:35px;
+    display:inline-block;
+    background-size:40px 45px;
+}
+.comments {
+    margin: 0 15px;
+    display: flex;
+}
+.avatarList {
+    flex:1;
+    background-color: #f3f3f5;
+    margin-top:10px;
+    padding:5px 0 0 10px;
+}
+.likeAvatar {
+    width: 35px;
+    height: 35px;
 }

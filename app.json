@@ -1,11 +1,11 @@
 {
   "pages":[
-    "pages/create/create",
     "pages/list/list",
     "pages/detail/detail",
     
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/create/create"
+    
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,6 +1,10 @@
-// pages/create/create.js
+var app = getApp();
+var pic = wx.getStorageSync('pic') || '';
+
 Page({
-  data:{},
+  data:{
+    imgSrc: pic
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },
@@ -18,6 +22,23 @@ Page({
     // 页面关闭
   },
   submit: function(e){
-    console.log(e);
+    var list = wx.getStorageSync('list') || [];
+
+    wx.saveFile({
+      tempFilePath: pic,
+      success: function(res) {
+        list.push({
+          "text": e.detail.value.textarea.trim(),
+          "pic": res.savedFilePath,
+          "count": parseInt(e.detail.value.likeCount.trim()) || 0,
+          "time": Date.now()
+        })
+        wx.setStorageSync('list', list);
+      }
+    })
+
+    wx.redirectTo({
+      url: '/pages/list/list'
+    })
   }
 })

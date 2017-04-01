@@ -1,15 +1,20 @@
 <view class="moment">
-    <view class="avatar">
-        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    </view>
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+
     <view class="moment-main">
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        <text class="moment-content">这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字</text>
-        <image class="moment-img" src="../../img/test.png" background-size="cover"></image>
+        <text class="moment-content">{{detail.text}}</text>
+        <image class="moment-img" src="{{detail.pic}}" mode="aspectFit"></image>
         <view class="moment-extend">
-            <text class="moment-time">2016年10月22日 17:19</text>
+            <text class="moment-time">{{detail.time}}</text>
             <text class="moment-delete">删除</text>
-            <image class="moment-control" src="../../img/test.png" background-size="cover"></image>
+            <image class="moment-control" src="../../img/comment.png"></image>
         </view>
     </view>
+</view>
+<view class="comments">
+    <view class="avatarList">
+        <image class="likeAvatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    
 </view>

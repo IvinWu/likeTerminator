@@ -1,2 +1,23 @@
-<!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="header">
+    <text class="nickName">{{userInfo.nickName}}</text>
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+</view>
+
+<view class="momentList">
+    <view class="momentTime">
+        <text class="momentDay">今天</text>
+    </view>
+    <view class="momentConent">
+        <image bindtap="selectPic" class="momentImg" src="../../img/camera.png"></image>
+    </view>
+</view>
+
+<view class="momentList" wx:for="{{list}}" wx:for-item="list" wx:for-index="idx">
+    <view class="momentTime">
+        <text class="momentDay">{{list.day}}</text><text class="momentMonth">{{list.month}}月</text>
+    </view>
+    <view class="momentConent" data-id="{{idx}}" bindtap="showDetail">
+        <image class="momentImg" src="{{list.pic}}" mode="aspectFill"></image>
+        <text class="momentText">{{list.text}}</text>
+    </view>
+</view>

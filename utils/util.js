@@ -5,10 +5,8 @@ function formatTime(date) {
 
   var hour = date.getHours()
   var minute = date.getMinutes()
-  var second = date.getSeconds()
 
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+  return formatNumber(year) + '年' + formatNumber(month) + '月' + formatNumber(day) + '日' + ' ' + [hour, minute].map(formatNumber).join(':')
 }
 
 function formatNumber(n) {
@@ -16,6 +14,16 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function getMonth(date) {
+  return date.getMonth() + 1;
+}
+
+function getDay(date) {
+  return formatNumber(date.getDate());
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getMonth: getMonth,
+  getDay: getDay
 }
